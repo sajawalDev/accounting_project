@@ -1,0 +1,132 @@
+:global(*) {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.cardBoxHeading {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.cardBoxHeading h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #0b1e3d;
+}
+
+.cardBoxHeading p {
+  color: #555;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.cardBox {
+  position: relative;
+  overflow: hidden;
+  background: #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  height: 380px;
+  width: 100%;
+}
+
+.cardBox:hover {
+  transform: translateY(-8px);
+}
+
+.boxcontent {
+  text-align: center;
+  padding: 25px;
+}
+
+.boxImg {
+  width: 130px;
+  height: 120px;
+  margin: 0 auto;
+}
+
+.boxImg img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.boxcontent h3 {
+  margin-top: 15px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #0b1e3d;
+}
+
+/* Hover reveal animation */
+.hoverContent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  overflow: hidden;
+  background-color: #0b1e3d;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: height 0.8s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.hoverInner {
+  width: 90%;
+  max-width: 90%;
+  text-align: center;
+}
+
+.hoverContent h5 {
+  margin-bottom: 12px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.hoverContent p {
+  font-size: 15px;
+  line-height: 1.6;
+  text-align: left;
+  color: #fff;
+}
+
+/* when hoverContent becomes visible */
+.show {
+  height: 100%;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .cardBox {
+    height: 360px;
+  }
+}
+
+@media (max-width: 768px) {
+  .cardBox {
+    height: auto;
+  }
+
+  .hoverContent p {
+    font-size: 14px;
+  }
+
+  .boxcontent h3 {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 576px) {
+  .cardBoxHeading h1 {
+    font-size: 1.6rem;
+  }
+  .cardBoxHeading p {
+    font-size: 14px;
+  }.cardBox{
+    height: 287px;
+  }
+}

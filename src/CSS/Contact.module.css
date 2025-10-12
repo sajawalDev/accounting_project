@@ -1,0 +1,47 @@
+:global(*){
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.mainContainer{
+    margin-top: 100px;
+    margin-bottom: 40px;
+}
+.contactHeading{
+    width: 70%;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    text-align: center;
+}
+.popup {
+  position: fixed;
+  top: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #0B1E3D;
+  color: #fff;
+  padding: 16px 24px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 300px;
+  font-size: 15px;
+  text-align: center;
+  animation: fadeIn 0.4s ease;
+}
+
+.closeIcon {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  cursor: pointer;
+  color: white;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translate(-50%, -20px); }
+  to { opacity: 1; transform: translate(-50%, 0); }
+}

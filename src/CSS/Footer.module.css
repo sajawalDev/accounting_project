@@ -1,0 +1,34 @@
+:global(*){
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.FooterContainer{
+    margin-top: auto;
+    background: #0B1E3D;
+    color: #fff;
+    
+}
+.Footerheading{
+    text-align: center;
+}
+.FooterContainer ul li {
+    list-style: none;
+    line-height: 38px;
+}
+.FooterContainer ul .listitems{
+    text-decoration: none;
+    color: #fff;
+}
+.copyright{
+    margin-top: 40px;
+    text-align: center;
+}
+.copyright p{
+    font-size: 14px;
+}
+@media(max-width:991px){
+    .footerContent{
+        margin-left: 25px;
+    }
+}

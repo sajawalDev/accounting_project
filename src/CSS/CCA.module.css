@@ -1,0 +1,48 @@
+:global(*){
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.CCAHeading{
+    text-align: center;
+}
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #0B1E3D;
+  height: 340px;
+  padding: 14px 0;
+}
+
+.cardImg{
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+}
+.cardImg img {
+  width: 100%;
+  object-fit: contain;
+}
+
+.cardContent {
+  padding: 16px;
+}
+
+.CCAHeading {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.custom-pagination {
+  display: none !important;
+  text-align: center;
+  margin-top: 15px;
+}
+
+@media (max-width: 1023px) {
+  .custom-pagination {
+    display: block !important;
+  }
+}

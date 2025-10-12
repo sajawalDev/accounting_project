@@ -1,0 +1,29 @@
+:global(*){
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.Tbox{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 20px;
+}
+.Tbox i{
+    font-size: 25px;
+    padding: 10px 0;
+    width: 50px;
+    border: 2px solid #0B1E3D;
+    border-radius: 3px;
+}
+.Tbox span{
+    font-size: 15px;
+}
+@media(max-width:992px){
+    .Tbox{
+        margin: 15px 0;
+    }
+    .Tbox span{
+        font-size: 14px;
+    }
+}

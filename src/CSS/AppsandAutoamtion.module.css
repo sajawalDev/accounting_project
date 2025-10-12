@@ -1,0 +1,85 @@
+:global(*) {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.mainContainer {
+  background-color: #f5f5f5;
+  border-radius: 20px;
+  padding: 20px 0 40px;
+}
+
+.Automationheading {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+/* ===== Buttons ===== */
+.autoBtn {
+  background: #0b1e3d;
+  color: #fff;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  white-space: nowrap;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  margin: 0 5px;
+}
+
+.autoBtn:hover {
+  background: #fff;
+  color: #0b1e3d;
+  border: 1px solid #0b1e3d;
+}
+
+.active {
+  background: #fff;
+  color: #0b1e3d;
+  border: 1px solid #0b1e3d;
+}
+
+/* ===== Slider Wrapper ===== */
+.sliderWrapper {
+  position: relative;
+  padding: 0 50px;
+  margin-bottom: 30px;
+   overflow: hidden; 
+   z-index: 10;
+}
+
+/* Fix Swiper Container */
+.swiperContainer {
+  overflow: hidden !important;
+}
+
+.navBtn {
+  color: #0b1e3d !important;
+  background: rgba(255, 255, 255, 0.98);
+  border: 1px solid #0b1e3d;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  padding: 5px; 
+}
+
+.swiper-button-prev {
+  left: 5px;
+}
+.swiper-button-next {
+  right: 5px;
+}
+
+
+
+/* ===== Image Grid ===== */
+.imageContainer img {
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.imageContainer img:hover {
+  transform: scale(1.05);
+}

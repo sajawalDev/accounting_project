@@ -1,0 +1,81 @@
+:global(*){
+    margin: 0;
+    padding:0 ;
+    box-sizing: border-box;
+}
+.mainContainer{
+    margin-top: 140px;
+}
+.containerHeading{
+    width: 70%;
+    margin: 0 auto;
+    text-align: center;
+}
+.hkfContainer{
+    background: #F5F5F5;
+    padding: 30px;
+}
+.ContractBaseContainer{
+    background:#F5F5F5;
+    padding: 30px;
+}
+.headingContent{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 18px 0;
+
+}
+.hkfContainer h4{
+    padding: 14px 0;
+}
+.ContractBaseContainer h4{
+    padding: 14px 0;
+}
+.hkfContainer h5{
+     font-size: 17px;
+}
+.ContractBaseContainer h5{
+    font-size: 17px;
+}
+.hkfContainer .headingContent .contetnHead{
+    color: #0B1E3D;
+}
+.hkfContainer .headingContent .contentValue{
+    color: #3E9C79;
+}
+.ContractBaseContainer .headingContent .contetnHead{
+    color: #0B1E3D;
+}
+.ContractBaseContainer .headingContent .contentValue{
+    color: #CA0404;
+}
+.SecondContainer{
+    margin: 20px 0;
+}
+.secondHeadingg{
+    width: 70%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 15px 0;
+}
+.SecondContainer p{
+    color: #AC9BA4;
+}
+@media(max-width:600px){
+    .mainContainer{
+    margin-top: 100px;
+}
+    .hkfContainer{
+        padding: 14px;
+    }
+    .ContractBaseContainer{
+        padding: 14px;
+    }
+    .containerHeading{
+        width: 80%;
+    }
+    .secondHeadingg{
+        width: 83%;
+    }
+}

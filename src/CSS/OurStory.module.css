@@ -1,0 +1,29 @@
+:global(*){
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.mainContainer{
+    margin-top: 140px;
+}
+.mainHeading{
+    text-align: center;
+}
+.globalContent{
+    width: 70%;
+    margin: 20px auto;
+    text-align: justify;
+}
+.FooterGlobalimg img{
+    width: 100%;
+    
+}
+@media(max-width:600px){
+    .globalContent{
+        width: 90%;
+        margin: 30px auto;
+    }
+    .mainContainer{
+    margin-top: 100px;
+}
+}

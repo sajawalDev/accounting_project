@@ -1,0 +1,100 @@
+.mainContainer{
+    margin-top: 140px;
+}
+
+.mianHeading {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.mianHeading h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #001f3f; /* deep navy */
+}
+
+.mianHeading p {
+  max-width: 800px;
+  margin: 15px auto 0;
+  color: #555;
+  line-height: 1.7;
+  font-size: 1.05rem;
+}
+
+.securityImage {
+  border-radius: 12px;
+  object-fit: contain;
+}
+
+/* Button Group Styling */
+.buttonGroup {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.buttonGroup button {
+  background-color: #001f3f; /* Navy blue */
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 14px;
+  font-size: 0.95rem;
+  cursor: default; /* Not clickable */
+}
+
+.buttonGroup button:focus {
+  outline: none;
+}
+/* Existing styles remain unchanged */
+
+.protectionSection {
+  margin-top: 80px;
+  padding-top: 60px;
+  border-top: 1px solid #e0e0e0;
+}
+
+.protectBox {
+  background: #F5F5F5;
+  border-radius: 14px;
+  padding: 25px;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.protectBox h4 {
+  color: #001f3f;
+  font-weight: 600;
+  margin-top: 15px;
+  font-size: 1.15rem;
+}
+
+.protectBox p {
+  color: #555;
+  font-size: 0.95rem;
+  margin-top: 8px;
+  line-height: 1.6;
+}
+
+.protectBox img {
+  margin-bottom: 10px;
+}
+
+.protectBox:hover {
+  transform: translateY(-3px);
+}
+.ourCertifications{
+   margin: 20px 0;
+}
+@media(max-width:600px){
+    .protectBox{
+        margin: 12px 0;
+    }
+    .mainContainer{
+    margin-top: 100px;
+}
+    
+   
+}
