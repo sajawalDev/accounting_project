@@ -123,12 +123,12 @@ const BlogDetailsPage = () => {
         <div className="container">
           <div className="row">
             <div className="col-lg-8">
-              <p className={Styles.mainArticle}>
+              <div className={Styles.mainArticle}>
                 <span>
                   <b>Article: </b>
                 </span>
                 {formattedContent}
-              </p>
+              </div>
             </div>
             <div className="col-lg-4">
               <h4>Related Blogs</h4>
