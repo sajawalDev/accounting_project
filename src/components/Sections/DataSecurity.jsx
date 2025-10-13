@@ -37,6 +37,7 @@ const DataSecurity = () => {
                   src={card.img}
                   alt={card.title}
                   fill
+                  unoptimized={true}
                   style={{ objectFit: "contain" }}
                 />
               </div>

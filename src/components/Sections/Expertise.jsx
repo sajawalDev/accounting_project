@@ -92,6 +92,7 @@ const Expertise = () => {
                     src={item.img}
                     alt={item.title}
                     fill
+                    unoptimized={true}
                     style={{ objectFit: "cover", borderRadius: "12px" }}
                   />
                 </div>

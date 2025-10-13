@@ -108,6 +108,7 @@ const BlogsPage = () => {
                       <img
                         src={blog.image}
                         alt={blog.title}
+                        unoptimized={true}
                         className={Styles.ImageBlog}
                       />
                     </div>

@@ -144,6 +144,7 @@ const BlogDetailsPage = () => {
                       <img
                         src={b.image}
                         alt={b.title}
+                        unoptimized={true}
                         className={Styles.relatedImg}
                       />
                     </div>

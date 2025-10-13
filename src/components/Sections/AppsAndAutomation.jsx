@@ -97,6 +97,7 @@ const Automation = () => {
                   src={img}
                   alt={`${categories[activeIndex].title} example ${idx + 1}`}
                   fill
+                  unoptimized={true}
                   quality={100}
                   style={{
                     objectFit: "contain",

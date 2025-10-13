@@ -67,6 +67,7 @@ const CCA = () => {
                   src={card.img}
                   alt={card.title}
                   fill
+                  unoptimized={true}
                   style={{ objectFit: "contain" }}
                   
                 />

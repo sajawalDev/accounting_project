@@ -97,6 +97,7 @@ const Section3 = () => {
                                 <Image
                                     src={slide.img}
                                     alt={slide.title}
+                                    unoptimized={true}
                                     width={300}   // set desired width
                                     height={200}  // set desired height
                                     style={{ objectFit: "contain" }}

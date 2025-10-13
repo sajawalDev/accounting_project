@@ -22,6 +22,7 @@ const OurAccountants = () => {
             fill
             style={{ objectFit: "contain" }}
             priority
+            unoptimized={true}
           />
         </div>
       </div>

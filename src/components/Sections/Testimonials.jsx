@@ -72,6 +72,7 @@ const Testimonials = () => {
                                     src={client.img}
                                     alt={client.name}
                                     fill
+                                    unoptimized={true}
                                     className={Styles.image}
                                 />
                             </div>
