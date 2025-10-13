@@ -128,6 +128,7 @@ const Security = () => {
                                     alt={item.title}
                                     width={250}
                                     height={250}
+                                    unoptimized={true}
                                     className={Styles.securityImage}
                                 />
                             </div>
@@ -142,21 +143,21 @@ const Security = () => {
                         <div className="row align-items-start mb-5">
                             <div className="col-lg-6 col-md-8">
                                 <div className={Styles.protectBox}>
-                                    <Image src={protectionData[0].image} alt={protectionData[0].title} width={80} height={80} />
+                                    <Image src={protectionData[0].image}  alt={protectionData[0].title} unoptimized={true} width={80} height={80} />
                                     <h4>{protectionData[0].title}</h4>
                                     <p>{protectionData[0].description}</p>
                                 </div>
                             </div>
                             <div className="col-lg-3 col-md-4">
                                 <div className={Styles.protectBox}>
-                                    <Image src={protectionData[1].image} alt={protectionData[1].title} width={80} height={80} />
+                                    <Image src={protectionData[1].image} alt={protectionData[1].title} unoptimized={true} width={80} height={80} />
                                     <h4>{protectionData[1].title}</h4>
                                     <p>{protectionData[1].description}</p>
                                 </div>
                             </div>
                             <div className="col-lg-3 col-md-4">
                                 <div className={Styles.protectBox}>
-                                    <Image src={protectionData[2].image} alt={protectionData[2].title} width={80} height={80} />
+                                    <Image src={protectionData[2].image} alt={protectionData[2].title} unoptimized={true} width={80} height={80} />
                                     <h4>{protectionData[2].title}</h4>
                                     <p>{protectionData[2].description}</p>
                                 </div>
@@ -167,21 +168,21 @@ const Security = () => {
                         <div className="row align-items-start">
                             <div className="col-lg-3 col-md-4">
                                 <div className={Styles.protectBox}>
-                                    <Image src={protectionData[3].image} alt={protectionData[3].title} width={80} height={80} />
+                                    <Image src={protectionData[3].image} alt={protectionData[3].title} unoptimized={true} width={80} height={80} />
                                     <h4>{protectionData[3].title}</h4>
                                     <p>{protectionData[3].description}</p>
                                 </div>
                             </div>
                             <div className="col-lg-3 col-md-4">
                                 <div className={Styles.protectBox}>
-                                    <Image src={protectionData[4].image} alt={protectionData[4].title} width={80} height={80} />
+                                    <Image src={protectionData[4].image} alt={protectionData[4].title} unoptimized={true} width={80} height={80} />
                                     <h4>{protectionData[4].title}</h4>
                                     <p>{protectionData[4].description}</p>
                                 </div>
                             </div>
                             <div className="col-lg-6 col-md-8">
                                 <div className={Styles.protectBox}>
-                                    <Image src={protectionData[5].image} alt={protectionData[5].title} width={80} height={80} />
+                                    <Image src={protectionData[5].image} alt={protectionData[5].title} unoptimized={true} width={80} height={80} />
                                     <h4>{protectionData[5].title}</h4>
                                     <p>{protectionData[5].description}</p>
                                 </div>
@@ -192,9 +193,9 @@ const Security = () => {
                     <div className={Styles.ourCertifications}>
                         <h2 className='text-center'>Our Certifications</h2>
                         <div className='row justify-content-center'>
-                            <div className='col-md-3 text-center'><Image src="/assets/security/c1.png" alt="certificates" className={Styles.Images} width={200} height={200}/></div>
-                            <div className='col-md-3 text-center'><Image src="/assets/security/c2.png" alt="certificates" className={Styles.Images} width={200} height={200}/></div>
-                            <div className='col-md-3 text-center'><Image src="/assets/security/c3.png" alt="certificates" className={Styles.Images} width={200} height={200}/></div>
+                            <div className='col-md-3 text-center'><Image src="/assets/security/c1.png" alt="certificates" unoptimized={true} className={Styles.Images} width={200} height={200}/></div>
+                            <div className='col-md-3 text-center'><Image src="/assets/security/c2.png" alt="certificates" unoptimized={true} className={Styles.Images} width={200} height={200}/></div>
+                            <div className='col-md-3 text-center'><Image src="/assets/security/c3.png" alt="certificates" unoptimized={true} className={Styles.Images} width={200} height={200}/></div>
                         </div>
                     </div>
                      <FAQs/>
