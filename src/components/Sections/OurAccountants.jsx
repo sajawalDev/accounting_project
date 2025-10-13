@@ -16,7 +16,7 @@ const OurAccountants = () => {
 
       <div className="row">
         <div className="col" style={{ position: "relative", width: "100%", height: '500px' }}>
-          <Image
+          <img
             src="/assets/expertiselevel.jpg"
             alt="Our Accountant Levels"
             fill

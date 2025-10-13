@@ -63,7 +63,7 @@ const CCA = () => {
                 className={Styles.cardImg}
                 style={{ position: "relative", width: "100%", height: "100px" }}
               >
-                <Image
+                <img
                   src={card.img}
                   alt={card.title}
                   fill

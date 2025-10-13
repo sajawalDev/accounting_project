@@ -88,7 +88,7 @@ const Expertise = () => {
             >
               <div className={Styles.boxcontent}>
                 <div className={Styles.boxImg} style={{ position: "relative", width: "40%", height: "100px",objectFit:'contain' }}>
-                  <Image
+                  <img
                     src={item.img}
                     alt={item.title}
                     fill
