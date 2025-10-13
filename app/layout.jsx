@@ -1,5 +1,6 @@
 // app/layout.js
 import "bootstrap/dist/css/bootstrap.min.css";
+import '@fortawesome/fontawesome-free/css/all.min.css';
 import BootstrapJS from "../src/components/BootstrapJs"; // client-only JS loader
 import Navbar from "@/components/Navbar/Navbar";
 import Footer from "@/components/Footer/Footer";
