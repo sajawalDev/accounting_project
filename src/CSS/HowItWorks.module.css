@@ -1,15 +1,18 @@
-:global(*){
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+:global(*) {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-.containerHeading{
-    text-align: center;
-    margin: 30px 0;
+
+.containerHeading {
+  text-align: center;
+  margin: 30px 0;
 }
-.containerHeading p{
-    margin: 14px 0;
+
+.containerHeading p {
+  margin: 14px 0;
 }
+
 .card {
   display: flex;
   flex-direction: column;
@@ -35,35 +38,69 @@
 .cardImg img {
   width: 100%;
 }
-.cardDynamicContent{
-    display: flex;
-    align-items: baseline;
-    margin-top: 10px;
+
+.cardDynamicContent {
+  display: flex;
+  align-items: baseline;
+  margin-top: 10px;
 }
 
 .LinEffect {
   display: block;
   height: 2px;
-  width: 10%; 
-  background-color: #0b1e3d; 
+  width: 10%;
+  background-color: #0b1e3d;
   margin-top: 8px;
   border-radius: 20px;
-  transition: width 1.2s ease; 
+  transition: width 1.2s ease;
 }
 
 .card:hover .LinEffect {
   width: 90%;
 }
-.ActualContent h2{
-    margin: 16px 0;
+
+.ActualContent h2 {
+  margin: 16px 0;
 }
-@media(max-width:600px){
-  .card{
+
+/* 📱 Responsive adjustments for mobile */
+@media (max-width: 600px) {
+  .card {
     min-height: 250px;
+    padding: 20px;
   }
+
   .cardImg {
-  width: 100px;
-  height: 100px;
-  margin: 0 auto;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+  }
+
+  .containerHeading {
+    margin: 20px 0;
+  }
+
+  .containerHeading h1 {
+    font-size: 1.8rem;
+  }
+
+  .containerHeading p {
+    font-size: 0.95rem;
+  }
 }
+
+/* 🟣 Swiper pagination (only used in mobileSwiper class) */
+.mobileSwiper .swiper-pagination {
+  bottom: 10px !important;
+  text-align: center !important;
+}
+
+.mobileSwiper .swiper-pagination-bullet {
+  background: #0b1e3d !important;
+  opacity: 0.4;
+  transition: opacity 0.3s ease;
+}
+
+.mobileSwiper .swiper-pagination-bullet-active {
+  opacity: 1;
 }

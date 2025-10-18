@@ -76,7 +76,7 @@ const WhyChooseUs = () => {
         <div className="row justify-content-center align-items-center">
           <div className="col-lg-5">
             <div className={Styles.hkfContainer}>
-              <h4 className="text-center">HKFinance</h4>
+              <h4 className="text-center">HAK Financials</h4>
               {comparisonData.map((item, index) => (
                 <div key={index} className={Styles.headingContent}>
                   <div className={Styles.contetnHead}>
@@ -116,7 +116,7 @@ const WhyChooseUs = () => {
         {/* Benefits Section */}
         <div className={Styles.SecondContainer}>
           <div className={Styles.secondHeadingg}>
-            <h1>Benefits of Outsourcing to HKFinance</h1>
+            <h1>Benefits of Outsourcing to HAK Financials</h1>
             <p>
               Our accountants and bookkeepers undergo a rigorous selection
               process, including comprehensive training and continuous

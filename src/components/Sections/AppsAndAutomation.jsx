@@ -93,7 +93,7 @@ const Automation = () => {
                   overflow: "hidden",
                 }}
               >
-                <img
+                <Image
                   src={img}
                   alt={`${categories[activeIndex].title} example ${idx + 1}`}
                   fill

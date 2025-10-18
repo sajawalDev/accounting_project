@@ -79,7 +79,7 @@ const Bookkeeping = () => {
           <h1>Bookkeeping & Accounting</h1>
           <p>
             Simplify your finances and stay compliant with{" "}
-            <strong>HKFinance</strong>. Our bookkeeping experts help you manage
+            <strong>HAK Financials</strong>. Our bookkeeping experts help you manage
             daily records, maintain accuracy, and ensure your business runs
             smoothly.
           </p>
@@ -168,7 +168,7 @@ const Bookkeeping = () => {
       <div className={Styles.servicebanner}>
         <h4>
           Join hundreds of Accounting firms growing their practices with{" "}
-          HKFinance’s expert accountants.
+          HAK Financials expert accountants.
         </h4>
       </div>
 

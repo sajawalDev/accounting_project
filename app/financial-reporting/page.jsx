@@ -78,7 +78,7 @@ const FinancialReporting = () => {
           <h1>Financial Reporting & Analysis</h1>
           <p>
             Transform your numbers into business intelligence with{" "}
-            <strong>HKFinance</strong>. Our expert reports and insights help you
+            <strong>HAK Financials</strong>. Our expert reports and insights help you
             monitor performance, identify trends, and make data-driven decisions
             with confidence.
           </p>
@@ -167,7 +167,7 @@ const FinancialReporting = () => {
       <div className={Styles.servicebanner}>
         <h4>
           Join hundreds of businesses making data-driven decisions with
-          HKFinance’s expert financial analysts.
+          HAK Financials expert financial analysts.
         </h4>
       </div>
 

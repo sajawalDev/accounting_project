@@ -61,9 +61,9 @@ const CCA = () => {
             <div className={Styles.card}>
               <div
                 className={Styles.cardImg}
-                style={{ position: "relative", width: "100%", height: "100px" }}
+                style={{ position: "relative", width: "70%", height: "100px",margin:'22px auto'}}
               >
-                <img
+                <Image
                   src={card.img}
                   alt={card.title}
                   fill

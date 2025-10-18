@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 .testimonialPage {
-  margin-top: 140px;
+  margin-top: 0px;
 }
 .Headingz{
     text-align: center;
@@ -50,6 +50,6 @@
 }
 @media(max-width:600px){
   .testimonialPage {
-  margin-top: 50px;
+  margin-top: 0px;
 }
 }

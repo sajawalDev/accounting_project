@@ -31,7 +31,7 @@ const Security = () => {
             description: (
                 <>
                     <p>
-                        Our ISO 27001 certification reinforces HKFinance’s commitment to a structured and proactive
+                        Our ISO 27001 certification reinforces HAK Financials commitment to a structured and proactive
                         approach to information security management. This globally recognized framework covers:
                     </p>
                     <div className={Styles.buttonGroup}>
@@ -48,7 +48,7 @@ const Security = () => {
             description: (
                 <>
                     <p>
-                        For clients operating within the EU or managing EU citizens’ data, HKFinance ensures
+                        For clients operating within the EU or managing EU citizens’ data, HAK Financials ensures
                         full compliance with GDPR standards. This regulation focuses on:
                     </p>
                     <div className={Styles.buttonGroup}>
@@ -71,7 +71,7 @@ const Security = () => {
         {
             title: "Secure Access Controls",
             description:
-                "HKFinance enforces strict access management protocols to ensure only verified and authorized team members can handle confidential financial information.",
+                "HAK Financials enforces strict access management protocols to ensure only verified and authorized team members can handle confidential financial information.",
             image: "/assets/security/img2.svg",
         },
         {
@@ -83,7 +83,7 @@ const Security = () => {
         {
             title: "2FA Authentication",
             description:
-                "Every login within HKFinance requires two-factor authentication (2FA), creating an added layer of defense to prevent unauthorized access and enhance overall system security.",
+                "Every login within HAK Financials requires two-factor authentication (2FA), creating an added layer of defense to prevent unauthorized access and enhance overall system security.",
             image: "/assets/security/img4.svg",
         },
         {
@@ -95,7 +95,7 @@ const Security = () => {
         {
             title: "Regular Audits & Assessments",
             description:
-                "Alongside our SOC 2 compliance, HKFinance conducts regular internal audits and assessments to maintain adherence to global security regulations and best practices.",
+                "Alongside our SOC 2 compliance, HAK Finances conducts regular internal audits and assessments to maintain adherence to global security regulations and best practices.",
             image: "/assets/security/img6.svg",
         },
     ];
@@ -108,7 +108,7 @@ const Security = () => {
                     <div className={Styles.mianHeading}>
                         <h2>Data Security & Compliance Standards</h2>
                         <p>
-                            At HKFinance, safeguarding client data isn’t merely an obligation — it’s a core
+                            At HAK Financials, safeguarding client data isn’t merely an obligation — it’s a core
                             responsibility we uphold with unwavering precision. Through our SOC 2, ISO 27001,
                             and GDPR compliance certifications, we maintain the industry’s highest security
                             benchmarks to protect your information at every level of interaction.
@@ -137,7 +137,7 @@ const Security = () => {
 
                     {/* New Section: How HKFinance Protects Your Data */}
                     <div className={Styles.protectionSection}>
-                        <h2 className="text-center mb-5">How HKFinance Protects Your Data</h2>
+                        <h2 className="text-center mb-5">How HAK Financials Protects Your Data</h2>
 
                         {/* First Row */}
                         <div className="row align-items-start mb-5">

@@ -33,7 +33,7 @@ const DataSecurity = () => {
                 className={Styles.cardImg}
                 style={{ position: "relative", width: "100%", height: "50px" }}
               >
-                <img
+                <Image
                   src={card.img}
                   alt={card.title}
                   fill

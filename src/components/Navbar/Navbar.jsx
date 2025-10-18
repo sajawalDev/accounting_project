@@ -3,7 +3,7 @@ import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import Styles from "./Navbar.module.css";
-import logo from "../../../public/logo4.png"; // Make sure logo4.png is inside /public
+import logo from "../../../public/logo4.png"; 
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

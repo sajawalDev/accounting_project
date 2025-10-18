@@ -7,13 +7,13 @@ const OurStory = () => {
   const storyData = [
     {
       heading: "Our Ethos",
-      text: "Under Promise, Over Deliver. We believe precision and deadlines define our reliability. At HKFinance, our team consistently goes beyond expectations, ensuring accurate and timely outcomes without added pressure. We handle the stress, so you can focus on peace of mind.",
+      text: "Under Promise, Over Deliver. We believe precision and deadlines define our reliability. At HAKFinances, our team consistently goes beyond expectations, ensuring accurate and timely outcomes without added pressure. We handle the stress, so you can focus on peace of mind.",
       img: "/assets/ourstory/accounts.png",
       alt: "Accounting teamwork",
     },
     {
       heading: "Our Aspiration",
-      text: "We aim to reshape the future of outsourced accounting services. HKFinance is dedicated to building success stories for firms and mid-market businesses by offering adaptive, cost-efficient solutions that scale with your needs, helping you achieve greater results with fewer resources.",
+      text: "We aim to reshape the future of outsourced accounting services. HAK Finances is dedicated to building success stories for firms and mid-market businesses by offering adaptive, cost-efficient solutions that scale with your needs, helping you achieve greater results with fewer resources.",
       img: "/assets/ourstory/accounts2.png",
       alt: "Financial collaboration",
     },
@@ -23,9 +23,9 @@ const OurStory = () => {
     <div className={Styles.mainContainer}>
       <div className="container">
         <div className={Styles.mainHeading}>
-          <h1>HKFinance – Delivering Accuracy Through Collaboration</h1>
+          <h1>HAK Financials – Delivering Accuracy Through Collaboration</h1>
           <p>
-            At HKFinance, we’re more than accountants — we’re your trusted ally in
+            At HAK Financials, we’re more than accountants — we’re your trusted ally in
             financial transparency and operational excellence. Dedicated to empowering
             accounting firms and mid-market businesses alike, our expertise extends far
             beyond numbers and reports. We’re committed to advancing your firm or

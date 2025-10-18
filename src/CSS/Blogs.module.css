@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 .mainContainer{
-    margin-top: 140px;
+    margin-top: 10px;
 }
 .blogsHeading{
     text-align: center;
@@ -154,7 +154,7 @@
 
 @media (max-width: 768px) {
   .mainContainer{
-    margin-top: 100px;
+    margin-top: 40px;
 }
   .Category button {
     padding: 7px 16px;
@@ -164,7 +164,7 @@
 
 @media (max-width: 576px) {
   .mainContainer{
-    margin-top: 50px;
+    margin-top: 5px;
 }
   .Category {
     gap: 10px;

@@ -14,7 +14,7 @@ const Footer = () => {
           {/* Left Column */}
           <div className="col-lg-5 col-md-6">
             <div className={Styles.footerContent}>
-              <h3>HKFinance</h3>
+              <h3>HAK Finances</h3>
               <p>Location: 685 Third Avenue, New York, NY 10017</p>
               <p>Email: hkfinance@gmail.com</p>
               <p>+1 (647) 342 4354</p>
@@ -80,7 +80,7 @@ const Footer = () => {
         </div>
 
         <div className={Styles.copyright}>
-          <p>Copyright © 2025 HKFinance | Powered by SajawalLabs</p>
+          <p>Copyright © 2025 HAKFinances | Powered by SajawalLabs</p>
         </div>
       </div>
     </footer>

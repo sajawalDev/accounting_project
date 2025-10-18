@@ -11,22 +11,23 @@ import DataSecurity from "../src/components/Sections/DataSecurity";
 import Faq from "../src/components/Sections/Faq";
 import Testimonials from "../src/components/Sections/Testimonials";
 import MouseSymbol from "@/components/MouseSymbol/page";
-
+import AnimatedSection from "@/components/Animation/page";
 
 export default function Home() {
   return (
     <>
-    <MouseSymbol/>
-      <Banner />
-      <Trust />
-      <HowItWorks />
-      <Expertise />
-      <AppsAndAutomation />
-      <OurAccountants />
-      <Cca />
-      <DataSecurity />
-      <Faq />
-      <Testimonials />
+      <MouseSymbol />
+
+      <AnimatedSection><Banner /></AnimatedSection>
+      <AnimatedSection delay={0.2}><Trust /></AnimatedSection>
+      <AnimatedSection delay={0.3}><HowItWorks /></AnimatedSection>
+      <AnimatedSection delay={0.4}><Expertise /></AnimatedSection>
+      <AnimatedSection delay={0.5}><AppsAndAutomation /></AnimatedSection>
+      <AnimatedSection delay={0.6}><OurAccountants /></AnimatedSection>
+      <AnimatedSection delay={0.7}><Cca /></AnimatedSection>
+      <AnimatedSection delay={0.8}><DataSecurity /></AnimatedSection>
+      <AnimatedSection delay={0.9}><Faq /></AnimatedSection>
+      <AnimatedSection delay={1.0}><Testimonials /></AnimatedSection>
     </>
   );
 }

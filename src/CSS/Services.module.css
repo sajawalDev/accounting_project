@@ -5,7 +5,7 @@
 }
 
 .mianContainer {
-    margin-top: 100px;
+    margin-top: 0px;
     /* padding: 60px 0; */
     background-color: #f8f9fa;
 }
@@ -206,6 +206,6 @@
 }
 @media(max-width:596px){
     .mianContainer{
-        margin-top: 80px;
+        margin-top: 0px;
     }
 }

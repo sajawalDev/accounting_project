@@ -18,7 +18,7 @@ const HomeBanner = () => {
       }}
     >
       <div className={Styles.parallaxContent}>
-        <h1>Welcome to HKFinance</h1>
+        <h1>Welcome to HAK Financials</h1>
         <p>
           Empowering businesses with reliable bookkeeping, audit, tax, and
           financial reporting services — delivered by experts who care about

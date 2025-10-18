@@ -78,7 +78,7 @@ const AuditAndCompliance = () => {
           <h1>Audit & Compliance</h1>
           <p>
             Protect your business with precise, transparent, and compliant audit
-            services. At <strong>HKFinance</strong>, we help you maintain trust,
+            services. At <strong>HAK Financials</strong>, we help you maintain trust,
             transparency, and integrity through rigorous audits and regulatory
             compliance support.
           </p>
@@ -140,7 +140,7 @@ const AuditAndCompliance = () => {
         <div className={Styles.parallaxContent}>
           <h2>Build Trust with Transparent Audits</h2>
           <p>
-            Our <strong>HKFinance</strong> audit experts ensure your business operates
+            Our <strong>HAK Financials</strong> audit experts ensure your business operates
             with transparency and credibility—strengthening investor confidence
             and enhancing your reputation in the marketplace.
           </p>
@@ -172,7 +172,7 @@ const AuditAndCompliance = () => {
       <div className={Styles.servicebanner}>
         <h4>
           Join hundreds of businesses ensuring accuracy and compliance with{" "}
-          HKFinance’s expert audit professionals.
+          HAK Financials expert audit professionals.
         </h4>
       </div>
 

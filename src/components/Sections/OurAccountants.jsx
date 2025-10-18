@@ -1,8 +1,21 @@
 'use client';
 
+import { useState, useEffect } from "react";
 import Image from "next/image";
 
 const OurAccountants = () => {
+  const [height, setHeight] = useState(600);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setHeight(window.innerWidth < 600 ? 300 : 600);
+    };
+
+    handleResize(); // Run on mount
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <div className="container-fluid mt-5">
       <div className="text-center">
@@ -15,14 +28,17 @@ const OurAccountants = () => {
       </div>
 
       <div className="row">
-        <div className="col" style={{ position: "relative", width: "100%", height: '500px' }}>
-          <img
+        <div
+          className="col"
+          style={{ position: "relative", width: "100%", height: `${height}px` }}
+        >
+          <Image
             src="/assets/expertiselevel.JPG"
             alt="Our Accountant Levels"
             fill
             style={{ objectFit: "contain" }}
             priority
-            unoptimized={true}
+            unoptimized
           />
         </div>
       </div>

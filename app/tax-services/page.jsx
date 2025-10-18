@@ -77,7 +77,7 @@ const TaxServices = () => {
         <div className={Styles.parallaxContent}>
           <h1>Tax Services</h1>
           <p>
-            Simplify your taxes with <strong>HKFinance</strong>. From planning
+            Simplify your taxes with <strong>HAK Financials</strong>. From planning
             and filing to compliance and advisory, we help you stay compliant,
             save more, and manage taxes strategically.
           </p>
@@ -165,7 +165,7 @@ const TaxServices = () => {
       {/* === Closing Banner === */}
       <div className={Styles.servicebanner}>
         <h4>
-          Join hundreds of businesses saving time and money with HKFinance’s
+          Join hundreds of businesses saving time and money with HAK Financials
           professional tax planning and filing services.
         </h4>
       </div>
