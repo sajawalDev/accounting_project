@@ -17,7 +17,7 @@ const OurAccountants = () => {
       <div className="row">
         <div className="col" style={{ position: "relative", width: "100%", height: '500px' }}>
           <img
-            src="/assets/expertiselevel.jpg"
+            src="/assets/expertiselevel.JPG"
             alt="Our Accountant Levels"
             fill
             style={{ objectFit: "contain" }}

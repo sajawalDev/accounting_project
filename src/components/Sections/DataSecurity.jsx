@@ -5,12 +5,12 @@ import Styles from "../../CSS/DataSecurity.module.css";
 
 const DataSecurity = () => {
   const cards = [
-    { img: "/assets/DataSecurity/img1.jpg", title: "Risk Management", desc: "Identifying and mitigating data risks." },
-    { img: "/assets/DataSecurity/img2.jpg", title: "Data Encryption", desc: "Utilizing advanced encryption protocols to protect sensitive information." },
-    { img: "/assets/DataSecurity/img3.jpg", title: "Access Control", desc: "Ensuring only authorized personnel can access confidential data." },
-    { img: "/assets/DataSecurity/img4.jpg", title: "Regulatory Compliance", desc: "Adhering to GDPR, ISO, and other international data protection standards." },
-    { img: "/assets/DataSecurity/img5.jpg", title: "24/7 Monitoring", desc: "Constantly monitoring systems to detect and prevent breaches." },
-    { img: "/assets/DataSecurity/img6.jpg", title: "Secure Backups", desc: "Regularly performing encrypted backups to prevent data loss." },
+    { img: "/assets/DataSecurity/img1.JPG", title: "Risk Management", desc: "Identifying and mitigating data risks." },
+    { img: "/assets/DataSecurity/img2.JPG", title: "Data Encryption", desc: "Utilizing advanced encryption protocols to protect sensitive information." },
+    { img: "/assets/DataSecurity/img3.JPG", title: "Access Control", desc: "Ensuring only authorized personnel can access confidential data." },
+    { img: "/assets/DataSecurity/img4.JPG", title: "Regulatory Compliance", desc: "Adhering to GDPR, ISO, and other international data protection standards." },
+    { img: "/assets/DataSecurity/img5.JPG", title: "24/7 Monitoring", desc: "Constantly monitoring systems to detect and prevent breaches." },
+    { img: "/assets/DataSecurity/img6.JPG", title: "Secure Backups", desc: "Regularly performing encrypted backups to prevent data loss." },
   ];
 
   return (

@@ -11,22 +11,22 @@ import Styles from "../../CSS/CCA.module.css";
 const CCA = () => {
   const cards = [
     {
-      img: "/assets/CCA/img1.jpg",
+      img: "/assets/CCA/img1.JPG",
       title: "90-Day Training",
       desc: "Junior accountants complete 90 days of rigorous training and evaluation, working under the guidance of a senior accountant.",
     },
     {
-      img: "/assets/CCA/img2.jpg",
+      img: "/assets/CCA/img2.JPG",
       title: "Comprehensive Testing",
       desc: "Each candidate is thoroughly tested on accounting principles, software proficiency, and practical case handling before certification.",
     },
     {
-      img: "/assets/CCA/img3.jpg",
+      img: "/assets/CCA/img3.JPG",
       title: "Continuous Development",
       desc: "Our accountants engage in ongoing professional education, ensuring their knowledge stays current with evolving financial regulations.",
     },
     {
-      img: "/assets/CCA/img4.jpg",
+      img: "/assets/CCA/img4.JPG",
       title: "Expert Supervision",
       desc: "Every trainee works closely with senior chartered accountants, gaining hands-on experience and learning industry best practices.",
     },
