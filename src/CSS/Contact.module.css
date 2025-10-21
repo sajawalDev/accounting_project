@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 .mainContainer{
-    margin-top: 40px;
+    margin-top: 110px;
     margin-bottom: 40px;
 }
 .contactHeading{
@@ -44,4 +44,15 @@
 @keyframes fadeIn {
   from { opacity: 0; transform: translate(-50%, -20px); }
   to { opacity: 1; transform: translate(-50%, 0); }
+}
+@media(max-width:600px){
+  .mainContainer{
+    margin-top: 90px;
+  }
+  .contactHeading{
+    width: 95%;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    text-align: center;
+}
 }

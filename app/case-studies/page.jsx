@@ -9,6 +9,7 @@ const CaseStudiesPage = () => {
   return (
     <div className={Styles.mainContainer}>
       <div className="container">
+        <h2 className="text-center my-2">Case Studies</h2>
         <div className="row">
           {caseStudies.map((cs) => (
             <div className="col-lg-4 col-md-6" key={cs.id}>
