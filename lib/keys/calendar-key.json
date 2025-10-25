@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "hkfinance-meetings",
+  "private_key_id": "3f0997df26f07b687faeda678685fb2d4068bef2",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCZOOic970QXjjT\nD6TknW2Lz3YfX57ImgRTtHSogUvWbIevF5yYcXNXV6IE6mYmc0dyaAUF3zz2Q3ha\n5lrJS5c2QgeGgUhGI5m4kFnMaqwPw6ISI5Y5h99SV5JT7JjO5wboPPFv1qT44Vao\ngzWfb4jIk4dH6aYM3ppPH9Sczar+/3g2i+9yjRcd0gwYp3/ho3NVQKbqC9FLORpk\n4lCcbAyhV7ludFMXH8hBJNFRykmVN+I1rKvVXMJi5Q0xERjlTGiehsFxcZzQvvb+\nCh5FPIYBhupT6BCoxWJWHvuQRe7PkalAnE6UtalFJ+PljWmiC6ZTe/q7FyvRJgWk\no6rA8uyTAgMBAAECggEADh0jXt4lJhOqeVVOE5mlbxpSSlaKWkvG9+zoorhHmOim\nC6IJqd3SyZSywcV+WQQHwfPvToNUlWdRTVI9wkq6aDmR1uPOxAM11D3xFPbYgu/l\nhx/hunVCbs55QKN2efc8TXqGT45+jhxiWU2+IUHACvXSoXRWItutwXnFocICLSXi\nWrrzEzSIyeXODJcEVHl1tljJ1GKueF/pVJ90hSKYUt2DMeTYUdorVSgHnLGJsSv5\nJZHqOF6fddgUGBL8mGtYQhcXB6CKBSTCiJixOpR39nBnFxRNTdVIQET8sWWgmIP0\nqXG4yP4pdr5jZjgiC0m+JRgjUPCjyqmqMxYseDkVzQKBgQDIW+ZmCPJGqvuf8ywf\nDR0VuIsc4BcJb/AeOOCb7HUB2V3JvtyEMCBKn/1bxOusOkKOY4+OboNFSFnuo9eQ\nLqhpaddGyQfJgPd+LMpcBZFPC6H8B1vbu3E4OlNnGC3nT2JO25zOAnGA9Wr7o1R+\nAyUCyz0tbsjtPjyYwQD0iHPknwKBgQDDxezhKnbRj6RD25fZtbYg5PvQK+4kpXZb\nsqJ578ZMOt59YGPxefGJzOqPMlb/OjFBWdjDxV2l73FcMJsalMKvOu7Fx09/vgCp\n2/1O8s5W50p+J/2tSq7DFlX+72XIGOGF27LFuhv3FOtmVdHcoFg/i4NDgm6gQEjv\n9N9AZFlfjQKBgDFdSyfqnl7A89wV2tIPthHK9SN5JtPha4TWuKhSGwYImy4Aw24i\nOWKJhq/clcBKXmmcqBsMqXUhfV7pqUvR4xaNyEedcji4eMHyoS0JBiM2l4N0ALLj\nvOKApFnrQCwUiAEr5LdxLKv8S46SUFf3yF+m2XzfJcwmIGH2c5jMIdm7AoGAR+9l\nMANbb3s5X5nDvUJwrruU75QEyEBoMh98ZhO9qGsFL8qITsWBBCJgmcdkghnO2XV7\nGcxescc+vyI5C9ZXhu2/qLqosoaNVdy4whajzPjlvV9Sbid/+b0uUiODIbhKvdXR\nZagR+IMeUBb+qvPcGVVZISg/H/EfG9S9Z7q3wE0CgYEAsQtxf9Q7I9MmOdVAVyAx\nlCOWkgmI9GxVIuEr8lEyYm2NU41lOPLQ6oRgfWhvHIB97cWvIG10qyXY51iz1/Q+\n9JH4bdKYcHzCSIt5T+4sGMhmHEZF2pby+GDBUPpJVpA6+CQZhNILUEvMWL4i6jLq\nxNJYpw+6tU2q0wbklSgfnXM=\n-----END PRIVATE KEY-----\n",
+  "client_email": "hakfinancials-calendar-service@hkfinance-meetings.iam.gserviceaccount.com",
+  "client_id": "110265659816975838289",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/hakfinancials-calendar-service%40hkfinance-meetings.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

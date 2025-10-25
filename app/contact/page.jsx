@@ -2,39 +2,12 @@
 
 import Styles from '../../src/CSS/Contact.module.css';
 import { useState } from 'react';
-import emailjs from '@emailjs/browser';
+import { useRouter } from "next/navigation";
 import { FaTimes } from 'react-icons/fa';
 import { Spinner } from 'react-bootstrap';
-// import img from "@/assets/ourstory/animated1.svg";
-
-// --- Next.js Metadata (App Router) ---
-// export const metadata = {
-//   title: "Contact HKFinance | Expert Accounting & Tax Support",
-//   description: "Get in touch with HKFinance for accounting, bookkeeping, audit, tax, and financial reporting services. Our experts help your business thrive.",
-//   keywords: "Contact, HKFinance, Accounting, Bookkeeping, Tax, Audit, Financial Reporting, Outsourcing, Services",
-//   authors: [{ name: "HKFinance", url: "https://hkfinance.com" }],
-//   viewport: "width=device-width, initial-scale=1.0",
-//   robots: "index, follow",
-//   openGraph: {
-//     title: "Contact HKFinance | Expert Accounting & Tax Support",
-//     description: "Reach out to HKFinance for professional accounting, tax, audit, and financial reporting services worldwide.",
-//     url: "https://hkfinance.com/contact",
-//     siteName: "HKFinance",
-//     images: [
-//       {
-//         url: "https://hkfinance.com/assets/og-image.jpg", // Replace with actual OG image
-//         width: 1200,
-//         height: 630,
-//         alt: "HKFinance Contact",
-//       },
-//     ],
-//     locale: "en_US",
-//     type: "website",
-//   },
-// };
 
 const Contact = () => {
-  const [formData, setFormData] = useState({
+    const [formData, setFormData] = useState({
         name: '',
         email: '',
         company: '',
@@ -42,51 +15,74 @@ const Contact = () => {
         hearAbout: '',
         message: '',
     });
+    const router = useRouter();
+
 
     const [isSending, setIsSending] = useState(false);
     const [popup, setPopup] = useState({ show: false, message: '', type: '' });
 
     const handleChange = (e) => {
-        setFormData({ ...formData, [e.target.name]: e.target.value });
+        const { name, value } = e.target;
+        setFormData((prev) => ({ ...prev, [name]: value }));
     };
 
-    const handleSubmit = (e) => {
+
+    const handleSubmit = async (e) => {
         e.preventDefault();
         setIsSending(true);
 
-        emailjs
-            .send(
-                'service_grkzhnb',
-                'template_403ma1c',
-                formData,
-                'NNVn0gx2A7VmlrfvP'
-            )
-            .then(
-                () => {
-                    setIsSending(false);
-                    setFormData({
-                        name: '',
-                        email: '',
-                        company: '',
-                        country: '',
-                        hearAbout: '',
-                        message: '',
-                    });
-                    setPopup({
-                        show: true,
-                        type: 'success',
-                        message: 'Your message has been sent successfully. Our team will contact you shortly!',
-                    });
-                },
-                () => {
-                    setIsSending(false);
-                    setPopup({
-                        show: true,
-                        type: 'error',
-                        message: 'Something went wrong. Please try again later!',
-                    });
-                }
-            );
+        try {
+            const res = await fetch("/api/contact", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(formData),
+            });
+
+            const data = await res.json();
+
+            if (data.success) {
+                setPopup({
+                    show: true,
+                    type: "success",
+                    message: "Your message has been sent successfully. Our team will contact you shortly!",
+                });
+                setFormData({
+                    name: "",
+                    email: "",
+                    company: "",
+                    country: "",
+                    hearAbout: "",
+                    message: "",
+                });
+            } else {
+                setPopup({
+                    show: true,
+                    type: "error",
+                    message: data.message || "Something went wrong. Please try again later!",
+                });
+            }
+        } catch (err) {
+            console.error(err);
+            setPopup({
+                show: true,
+                type: "error",
+                message: "Failed to send message. Please try again later!",
+            });
+        } finally {
+            setIsSending(false);
+        }
+    };
+
+
+
+    const handleStartFreeTrial = () => {
+        const stored = localStorage.getItem("meetingData");
+        if (stored) {
+            // Meeting already booked
+            router.push("/meeting-confirmation");
+        } else {
+            router.push("/book-meeting");
+        }
     };
 
     const countries = [
@@ -111,7 +107,6 @@ const Contact = () => {
 
     return (
         <div className={Styles.mainContainer}>
-            {/* ✅ Popup Notification */}
             {popup.show && (
                 <div className={Styles.popup}>
                     <FaTimes className={Styles.closeIcon} onClick={() => setPopup({ ...popup, show: false })} />
@@ -128,10 +123,8 @@ const Contact = () => {
                 </div>
 
                 <div className='row'>
-                    {/* LEFT COLUMN – CONTACT FORM */}
                     <div className='col-md-6'>
                         <form onSubmit={handleSubmit}>
-                            {/* Row 1 */}
                             <div className='row mb-3'>
                                 <div className='col'>
                                     <div className='form-floating'>
@@ -149,7 +142,6 @@ const Contact = () => {
                                 </div>
                             </div>
 
-                            {/* Row 2 */}
                             <div className='row mb-3'>
                                 <div className='col'>
                                     <div className='form-floating'>
@@ -172,7 +164,6 @@ const Contact = () => {
                                 </div>
                             </div>
 
-                            {/* Row 3 */}
                             <div className='row mb-3'>
                                 <div className='col'>
                                     <div className='form-floating'>
@@ -191,7 +182,6 @@ const Contact = () => {
                                 </div>
                             </div>
 
-                            {/* Row 4 */}
                             <div className='row mb-3'>
                                 <div className='col'>
                                     <div className='form-floating'>
@@ -202,7 +192,6 @@ const Contact = () => {
                                 </div>
                             </div>
 
-                            {/* Send Button */}
                             <div className='text-start'>
                                 <button
                                     type='submit'
@@ -227,8 +216,6 @@ const Contact = () => {
                         </form>
                     </div>
 
-                    {/* RIGHT COLUMN */}
-                    {/* RIGHT COLUMN */}
                     <div className='col-md-6 d-flex flex-column justify-content-center align-items-center text-center'>
                         <img
                             src='/assets/ourstory/animated1.svg'
@@ -241,13 +228,15 @@ const Contact = () => {
                             Hate filling out forms? Just dive right in then.
                         </h6>
 
+
                         <button
-                            onClick={() => window.location.href = "https://calendly.com/hkfinances000/30min"}
-                            className={"btn"}
-                            style={{backgroundColor:'#0B1E3D', color:'#fff'}}
+                            onClick={handleStartFreeTrial}
+                            className="btn"
+                            style={{ backgroundColor: "#0B1E3D", color: "#fff" }}
                         >
                             Start Free Trial
                         </button>
+
 
                     </div>
 

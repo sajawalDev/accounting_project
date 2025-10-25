@@ -59,9 +59,8 @@ const Automation = () => {
             {categories.map((cat, index) => (
               <SwiperSlide key={index} style={{ width: "auto" }}>
                 <button
-                  className={`${Styles.autoBtn} ${
-                    activeIndex === index ? Styles.active : ""
-                  }`}
+                  className={`${Styles.autoBtn} ${activeIndex === index ? Styles.active : ""
+                    }`}
                   onClick={() => setActiveIndex(index)}
                 >
                   {cat.title}
@@ -74,38 +73,25 @@ const Automation = () => {
           <div className={`${Styles.navBtn} swiper-button-prev`}></div>
           <div className={`${Styles.navBtn} swiper-button-next`}></div>
         </div>
-
-        {/* ===== Image Grid ===== */}
-        <div className={`row ${Styles.imageContainer}`}>
+        <div className={Styles.imageContainer}>
           {categories[activeIndex].images.map((img, idx) => (
-            <div
-              key={idx}
-              className="col-4 col-sm-4 col-md-3 mb-3"
-              style={{ display: "flex", justifyContent: "center" }}
-            >
-              <div
-                style={{
-                  position: "relative",
-                  width: "60%",
-                  aspectRatio: "4 / 3",
-                  borderRadius: "10px",
-                  backgroundColor: "#f2f2f2",
-                  overflow: "hidden",
-                }}
-              >
+            <div key={idx} className={Styles.imageItem}>
+              <div className={Styles.imageBox}>
                 <Image
                   src={img}
                   alt={`${categories[activeIndex].title} example ${idx + 1}`}
                   fill
-                  unoptimized={true}
                   quality={100}
+                  priority={idx < 4}
+                  sizes="(max-width: 576px) 50vw, (max-width: 768px) 33vw, (max-width: 992px) 25vw, 16vw"
                   style={{
                     objectFit: "contain",
                     objectPosition: "center",
-                    borderRadius: "10px",
+                    transition: "transform 0.3s ease",
                   }}
                   className={Styles.autoImg}
                 />
+
               </div>
             </div>
           ))}

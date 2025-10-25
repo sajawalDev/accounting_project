@@ -28,7 +28,7 @@ const slidesData = [
     title: "Collaborate",
     img: "/assets/img6.png",
     text: "You can share your data with our accountants through various secure channels, including Dropbox, Google Drive, Hubdoc, Expensify, or our HAK FinanceS Portal, ensuring smooth and secure access.",
-    bgColor: "#B03CFF",
+    bgColor: "#9AECDB",
   },
   {
     id: "04",
@@ -42,7 +42,7 @@ const slidesData = [
     title: "Deliver",
     img: "/assets/img8.png",
     text: "Connect directly with your team via Skype, Slack, Teams, or HAK Finance’s portal. Expect seamless handling of bookkeeping, AR/AP, payroll, tax returns, custom reporting, and finance consulting.",
-    bgColor: "#B03CFF",
+    bgColor: "#CAD3C8",
   },
   {
     id: "06",

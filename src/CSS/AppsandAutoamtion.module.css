@@ -46,8 +46,8 @@
   position: relative;
   padding: 0 50px;
   margin-bottom: 30px;
-   overflow: hidden; 
-   z-index: 10;
+  overflow: hidden;
+  z-index: 10;
 }
 
 /* Fix Swiper Container */
@@ -62,7 +62,7 @@
   border-radius: 50%;
   width: 30px;
   height: 30px;
-  padding: 5px; 
+  padding: 5px;
 }
 
 .swiper-button-prev {
@@ -72,14 +72,62 @@
   right: 5px;
 }
 
-
-
-/* ===== Image Grid ===== */
-.imageContainer img {
-  border-radius: 10px;
-  transition: transform 0.3s ease;
+/* ===== Image Grid (use CSS Grid for deterministic columns) ===== */
+.imageContainer {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr); /* desktop: 6 columns */
+  gap: 12px;
+  width: 100%;
+  align-items: stretch;
 }
 
-.imageContainer img:hover {
+/* Each grid item */
+.imageItem {
+  width: 100%;
+  display: block;
+}
+
+/* Parent that Next/Image fill will sit inside */
+.imageBox {
+  position: relative; /* required for next/image fill */
+  width: 60%;
+  aspect-ratio: 4 / 3; /* keeps consistent box height */
+  border-radius: 10px;
+  overflow: hidden;
+   /* fallback background while image loads */
+}
+
+/* The actual img produced by next/image when using fill */
+.autoImg {
+  /* don't give fixed width/height — fill will absolutely position img inside parent */
+  transition: transform 0.3s ease, filter 0.3s ease;
+  will-change: transform;
+}
+
+.imageBox:hover .autoImg {
   transform: scale(1.05);
+  filter: brightness(1.03);
+}
+
+/* ===== Responsive Layouts ===== */
+
+/* Tablet (<= 992px) -> 4 columns */
+@media (max-width: 992px) {
+  .imageContainer {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Mobile (<= 768px) -> 3 columns */
+@media (max-width: 768px) {
+  .imageContainer {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Small phones (<= 576px) -> 2 columns */
+@media (max-width: 576px) {
+  .imageContainer {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }

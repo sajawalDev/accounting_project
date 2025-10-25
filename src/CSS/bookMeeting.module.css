@@ -1,0 +1,65 @@
+/* ===== Default (Desktop) ===== */
+.booking-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.booking-left {
+  flex: 0 0 400px;
+  background-color: #0B1E3D;
+  color: white;
+}
+
+.booking-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.calendar-and-times {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.available-times {
+  max-width: 40%;
+}
+
+/* ===== Mobile (≤768px) ===== */
+@media (max-width: 768px) {
+  .booking-container {
+    flex-direction: column;
+  }
+
+  .booking-left {
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+    padding: 2rem 1rem;
+  }
+
+  .booking-right {
+    width: 100%;
+    max-width: 100%;
+    padding: 1rem;
+  }
+
+  .calendar-and-times {
+    flex-direction: column;
+  }
+
+  .calendar-and-times > div {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .available-times {
+    border-left: none !important;
+    border-top: 1px solid #e0e0e0;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-top: 1rem;
+    border-radius: 10px;
+  }
+}
