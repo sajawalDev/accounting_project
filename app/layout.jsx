@@ -29,11 +29,39 @@ const montserrat = Montserrat({
   display: "swap",
 });
 
+// app/layout.js
 export const metadata = {
-  title: "HKFinance – Accounting & Tax Experts",
-  description: "Professional accounting and finance services for your business.",
-  icons: {
-    icon: "/favicon.png",
+  title: "HakFinancials – Accounting & Tax Services for Businesses",
+  description:
+    "HakFinancials provides expert accounting, bookkeeping, and tax solutions for startups and small businesses. Grow confidently with professional financial management.",
+  keywords: [
+    "accounting services",
+    "bookkeeping",
+    "tax filing",
+    "financial consulting",
+    "Pakistan accounting",
+    "HakFinancials",
+  ],
+  authors: [{ name: "HakFinancials Team" }],
+  openGraph: {
+    title: "HakFinancials – Accounting & Tax Services",
+    description:
+      "Professional accounting and tax services for startups and small businesses in Pakistan.",
+    url: "https://hakfinancials.com",
+    siteName: "HakFinancials",
+    images: [
+      {
+        url: "https://hakfinancials.com/assets/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "HakFinancials Office",
+      },
+    ],
+    locale: "en_PK",
+    type: "website",
+  },
+  alternates: {
+    canonical: "https://hakfinancials.com",
   },
 };
 
