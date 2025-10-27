@@ -1,84 +1,44 @@
-"use client";
+import OurStory from "./OurStoryClient";
 
-import Image from "next/image";
-import Styles from "../../src/CSS/OurStory.module.css";
-
-const OurStory = () => {
-  const storyData = [
-    {
-      heading: "Our Ethos",
-      text: "Under Promise, Over Deliver. We believe precision and deadlines define our reliability. At HAKFinances, our team consistently goes beyond expectations, ensuring accurate and timely outcomes without added pressure. We handle the stress, so you can focus on peace of mind.",
-      img: "/assets/ourstory/accounts.png",
-      alt: "Accounting teamwork",
-    },
-    {
-      heading: "Our Aspiration",
-      text: "We aim to reshape the future of outsourced accounting services. HAK Finances is dedicated to building success stories for firms and mid-market businesses by offering adaptive, cost-efficient solutions that scale with your needs, helping you achieve greater results with fewer resources.",
-      img: "/assets/ourstory/accounts2.png",
-      alt: "Financial collaboration",
-    },
-  ];
-
-  return (
-    <div className={Styles.mainContainer}>
-      <div className="container">
-        <div className={Styles.mainHeading}>
-          <h1>HAK Financials – Delivering Accuracy Through Collaboration</h1>
-          <p>
-            At HAK Financials, we’re more than accountants — we’re your trusted ally in
-            financial transparency and operational excellence. Dedicated to empowering
-            accounting firms and mid-market businesses alike, our expertise extends far
-            beyond numbers and reports. We’re committed to advancing your firm or
-            business with customized, performance-focused outsourcing solutions.
-          </p>
-        </div>
-
-        {storyData.map((item, index) => (
-          <div
-            key={index}
-            className={`row align-items-center ${index % 2 === 0
-              ? "flex-md-row-reverse flex-column-reverse"
-              : "flex-md-row flex-column-reverse"
-              }`}
-          >
-            <div className="col-12 col-md-6 text-center">
-              <Image
-                src={item.img}
-                alt={item.alt}
-                width={500}      // adjust based on your design
-                height={300}     // adjust proportionally
-                className="img-fluid"
-
-              />
-
-            </div>
-
-            <div className="col-12 col-md-6">
-              <h4>{item.heading}</h4>
-              <p>{item.text}</p>
-            </div>
-          </div>
-        ))}
-
-        <div className={Styles.globalContent}>
-          <h2 className="text-center">Global Footprint</h2>
-          <p>
-            We’re proud to serve clients worldwide from our strategic locations, extending our expertise across continents to bring you seamless support wherever you operate. Our global presence means we bring localized insights and international standards to every client. Whether you’re a firm in Canada or a business in the US, our team is always within reach to meet your unique needs.
-          </p>
-        </div>
-      </div>
-
-      <div className={Styles.FooterGlobalimg}>
-        <Image
-          src="/assets/ourstory/global.png"
-          alt="Global network illustration"
-          width={1200}   // set according to your design
-          height={400}   // set proportionally
-        />
-      
-      </div>
-    </div>
-  );
+export const metadata = {
+  title: "Our Story | HAK Financials – Trusted Accounting Partners Worldwide",
+  description:
+    "Learn about HAK Financials — our ethos, our global reach, and how we empower firms and businesses with reliable, precise, and scalable accounting services.",
+  keywords:
+    "our story HAK Financials, accounting firm story, global accounting, outsourced accounting, bookkeeping company, accounting professionals Pakistan, financial collaboration",
+  alternates: {
+    canonical: "https://hakfinancials.com/our-story",
+  },
+  openGraph: {
+    title: "Our Story | HAK Financials – Delivering Accuracy Through Collaboration",
+    description:
+      "Discover how HAK Financials delivers precision, trust, and global support to firms and mid-market businesses through innovative outsourcing.",
+    url: "https://hakfinancials.com/our-story",
+    siteName: "HAK Financials",
+    images: [
+      {
+        url: "/assets/og-banner.jpg",
+        width: 1200,
+        height: 630,
+        alt: "HAK Financials Team Collaboration",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Our Story | HAK Financials – Trusted Accounting Partners",
+    description:
+      "At HAK Financials, we combine precision and reliability to help businesses thrive globally. Learn about our journey and commitment.",
+    images: ["/assets/og-banner.jpg"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
-export default OurStory;
+export default function OurStoryPage() {
+  return <OurStory />;
+}
