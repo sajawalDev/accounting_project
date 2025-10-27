@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://hakfinancials.com
+
+# Sitemaps
+Sitemap: https://hakfinancials.com/sitemap.xml

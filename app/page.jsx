@@ -1,5 +1,4 @@
-"use client";
-
+import Head from "next/head";
 import Banner from "../src/components/Sections/Banner";
 import Trust from "../src/components/Sections/Trust";
 import HowItWorks from "../src/components/Sections/HowItWorks";
@@ -16,8 +15,36 @@ import AnimatedSection from "@/components/Animation/page";
 export default function Home() {
   return (
     <>
-      <MouseSymbol />
+      <Head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "AccountingService",
+              name: "HakFinancials",
+              image: "https://hakfinancials.com/assets/logo4.png",
+              url: "https://hakfinancials.com",
+              telephone: "+92-XXX-XXXXXXX",
+              address: {
+                "@type": "PostalAddress",
+                streetAddress: "Your Office Address",
+                addressLocality: "Lahore",
+                addressRegion: "Punjab",
+                postalCode: "54000",
+                addressCountry: "PK",
+              },
+              openingHours: "Mo-Fr 09:00-18:00",
+              sameAs: [
+                "https://facebook.com/hakfinancials",
+                "https://www.linkedin.com/company/hakfinancials",
+              ],
+            }),
+          }}
+        />
+      </Head>
 
+      <MouseSymbol />
       <AnimatedSection><Banner /></AnimatedSection>
       <AnimatedSection delay={0.2}><Trust /></AnimatedSection>
       <AnimatedSection delay={0.3}><HowItWorks /></AnimatedSection>
