@@ -380,7 +380,7 @@ export default function BookMeeting() {
         {/* LEFT PANEL */}
         <div className="booking-left" style={leftStyle}>
           <h2 className="mb-3" style={{ display: "flex", alignItems: "center", gap: 8, justifyContent: isMobile ? "center" : "flex-start" }}>
-            1-week Free Trial 
+            1-week Free Trial
           </h2>
           <p style={{ marginBottom: 8 }}>Book your consultation with HAKFinancials.</p>
           <p className="mt-4" style={{ marginTop: 12 }}>
@@ -416,27 +416,47 @@ export default function BookMeeting() {
                 </div>
 
                 {/* Weekdays */}
-                <div className="d-flex justify-content-between text-center mb-2" style={{ fontWeight: 600 }}>
+                {/* Weekdays */}
+                <div
+                  style={{
+                    display: "grid",
+                    gridTemplateColumns: "repeat(7, 1fr)",
+                    textAlign: "center",
+                    fontWeight: 600,
+                    fontSize: "0.9rem",
+                    marginBottom: "0.5rem"
+                  }}
+                >
                   {weekdays.map((d) => (
-                    <div key={d} style={{ width: "13%", fontSize: "0.9rem" }}>{d}</div>
+                    <div key={d}>{d}</div>
                   ))}
                 </div>
 
                 {/* Calendar Days */}
-                <div className="d-flex flex-wrap" style={{ gap: "0.4rem" }}>
+                <div
+                  style={{
+                    display: "grid",
+                    gridTemplateColumns: "repeat(7, 1fr)",
+                    gap: "0.3rem",
+                    justifyItems: "center"
+                  }}
+                >
                   {allDays.map((day, i) =>
                     day ? (
                       (() => {
                         const state = dayState(day);
-                        const isSelected = selectedDate && selectedDate.endsWith(`-${String(day).padStart(2, "0")}`);
+                        const isSelected =
+                          selectedDate && selectedDate.endsWith(`-${String(day).padStart(2, "0")}`);
+
                         const baseStyle = {
-                          width: "13%",
+                          width: "100%",
                           padding: "0.5rem 0",
                           fontSize: "0.9rem",
                           borderRadius: "6px",
                           cursor: state === "past" ? "not-allowed" : "pointer",
                           fontWeight: state === "future" ? 700 : 500,
                         };
+
                         let className = "btn ";
                         let inline = { ...baseStyle };
 
@@ -475,7 +495,7 @@ export default function BookMeeting() {
                         );
                       })()
                     ) : (
-                      <div key={i} style={{ width: "13%" }}></div>
+                      <div key={i}></div>
                     )
                   )}
                 </div>
@@ -570,8 +590,8 @@ export default function BookMeeting() {
                             style={{
                               marginLeft: "auto",
                               cursor: "pointer",
-                              background: "#fff",
-                              color: "#0B1E3D",
+                              background: "none",
+                              color: "#fff",
                               padding: "4px 10px",
                               borderRadius: "6px",
                             }}
@@ -687,8 +707,8 @@ export default function BookMeeting() {
                       )}
 
                       <div className="d-flex justify-content-between mt-4">
-                        <Button variant="secondary" onClick={() => setStep(1)}>
-                          ← Back
+                        <Button  onClick={() => setStep(1)} style={{background:'#0B1E3D'}}>
+                          <i class="fa-solid fa-arrow-left-long"></i>
                         </Button>
                         <Button
                           variant="primary"
