@@ -9,23 +9,23 @@ import "swiper/css/navigation";
 import Styles from "../../CSS/AppsandAutoamtion.module.css";
 
 const categories = [
-  { title: "Accounting & Bookkeeping", images: Array.from({ length: 9 }, (_, i) => `/assets/bookkeepings/img${i + 1}.JPG`) },
-  { title: "Document Tracking & Publishing", images: Array.from({ length: 11 }, (_, i) => `/assets/documenttracking/img${i + 1}.JPG`) },
-  { title: "AR & AP Solutions", images: Array.from({ length: 14 }, (_, i) => `/assets/arapsolutions/img${i + 1}.JPG`) },
-  { title: "Payroll", images: Array.from({ length: 13 }, (_, i) => `/assets/payroll/img${i + 1}.JPG`) },
-  { title: "Tax Preparation", images: Array.from({ length: 3 }, (_, i) => `/assets/taxprep/img${i + 1}.JPG`) },
-  { title: "Working Papers", images: Array.from({ length: 5 }, (_, i) => `/assets/workingpapers/img${i + 1}.JPG`) },
-  { title: "Performance Analytics (Fractional CFO)", images: Array.from({ length: 4 }, (_, i) => `/assets/perfprmanceanalytics/img${i + 1}.JPG`) },
-  { title: "Inventory", images: Array.from({ length: 3 }, (_, i) => `/assets/inventory/img${i + 1}.JPG`) },
-  { title: "Practice & Workflow Management", images: Array.from({ length: 17 }, (_, i) => `/assets/practice/img${i + 1}.JPG`) },
-  { title: "Communication & Security", images: Array.from({ length: 4 }, (_, i) => `/assets/communication/img${i + 1}.JPG`) },
-  { title: "ERP", images: Array.from({ length: 4 }, (_, i) => `/assets/erp/img${i + 1}.JPG`) },
-  { title: "Real Estate Management Industry", images: Array.from({ length: 2 }, (_, i) => `/assets/realestate/img${i + 1}.JPG`) },
-  { title: "E-commerce", images: Array.from({ length: 6 }, (_, i) => `/assets/ecommerce/img${i + 1}.JPG`) },
-  { title: "Technology", images: Array.from({ length: 2 }, (_, i) => `/assets/technology/img${i + 1}.JPG`) },
-  { title: "Healthcare", images: ["/assets/healthcare/img1.JPG"] },
-  { title: "Construction", images: Array.from({ length: 3 }, (_, i) => `/assets/construction/img${i + 1}.JPG`) },
-  { title: "Law", images: ["/assets/law/img1.JPG"] },
+  { title: "Accounting & Bookkeeping", images: Array.from({ length: 9 }, (_, i) => `/assets/bookkeeping/img${i + 1}.png`) },
+  { title: "Document Tracking & Publishing", images: Array.from({ length: 10 }, (_, i) => `/assets/documenttracking/img${i + 1}.png`) },
+  { title: "AR & AP Solutions", images: Array.from({ length: 14 }, (_, i) => `/assets/arapsolution/img${i + 1}.png`) },
+  { title: "Payroll", images: Array.from({ length: 9 }, (_, i) => `/assets/payroll/img${i + 1}.png`) },
+  { title: "Tax Preparation", images: Array.from({ length: 3 }, (_, i) => `/assets/taxprep/img${i + 1}.png`) },
+  { title: "Working Papers", images: Array.from({ length: 5 }, (_, i) => `/assets/workingpapers/img${i + 1}.png`) },
+  { title: "Performance Analytics (Fractional CFO)", images: Array.from({ length: 4 }, (_, i) => `/assets/performance/img${i + 1}.png`) },
+  { title: "Inventory", images: Array.from({ length: 3 }, (_, i) => `/assets/inventory/img${i + 1}.png`) },
+  { title: "Practice & Workflow Management", images: Array.from({ length: 17 }, (_, i) => `/assets/practice/img${i + 1}.png`) },
+  { title: "Communication & Security", images: Array.from({ length: 4 }, (_, i) => `/assets/communication/img${i + 1}.png`) },
+  { title: "ERP", images: Array.from({ length: 4 }, (_, i) => `/assets/erp/img${i + 1}.png`) },
+  { title: "Real Estate Management Industry", images: Array.from({ length: 2 }, (_, i) => `/assets/realestate/img${i + 1}.png`) },
+  { title: "E-commerce", images: Array.from({ length: 6 }, (_, i) => `/assets/ecommerce/img${i + 1}.png`) },
+  { title: "Technology", images: Array.from({ length: 2 }, (_, i) => `/assets/technology/img${i + 1}.png`) },
+  { title: "Healthcare", images: ["/assets/healthcare/img1.png"] },
+  { title: "Construction", images: Array.from({ length: 3 }, (_, i) => `/assets/construction/img${i + 1}.png`) },
+  { title: "Law", images: ["/assets/law/img1.png"] },
 ];
 
 const Automation = () => {
@@ -70,8 +70,8 @@ const Automation = () => {
           </Swiper>
 
           {/* Navigation Buttons */}
-          <div className={`${Styles.navBtn} swiper-button-prev`}></div>
-          <div className={`${Styles.navBtn} swiper-button-next`}></div>
+          <div className={`${Styles.navBtnLeft} swiper-button-prev`}></div>
+          <div className={`${Styles.navBtnRight} swiper-button-next`}></div>
         </div>
         <div className={Styles.imageContainer}>
           {categories[activeIndex].images.map((img, idx) => (

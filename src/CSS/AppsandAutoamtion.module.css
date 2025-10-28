@@ -17,6 +17,7 @@
 
 /* ===== Buttons ===== */
 .autoBtn {
+  display: block;
   background: #0b1e3d;
   color: #fff;
   border: none;
@@ -42,20 +43,21 @@
 }
 
 /* ===== Slider Wrapper ===== */
-.sliderWrapper {
+/* .sliderWrapper {
   position: relative;
   padding: 0 50px;
   margin-bottom: 30px;
-  overflow: hidden;
-  z-index: 10;
-}
+  margin-top: 40px;
+  overflow:hidden;
+  z-index: 3;
+} */
 
 /* Fix Swiper Container */
 .swiperContainer {
   overflow: hidden !important;
 }
 
-.navBtn {
+.navBtnLeft {
   color: #0b1e3d !important;
   background: rgba(255, 255, 255, 0.98);
   border: 1px solid #0b1e3d;
@@ -63,15 +65,27 @@
   width: 30px;
   height: 30px;
   padding: 5px;
+  transition: all 0.3s ease;
+  z-index: 11;
+}
+.navBtnRight {
+  color: #0b1e3d !important;
+  background: rgba(255, 255, 255, 0.98);
+  border: 1px solid #0b1e3d;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  padding: 5px;
+  transition: all 0.3s ease;
+  z-index: 11;
 }
 
-.swiper-button-prev {
+/* .swiper-button-prev {
   left: 5px;
 }
 .swiper-button-next {
   right: 5px;
-}
-
+} */
 /* ===== Image Grid (use CSS Grid for deterministic columns) ===== */
 .imageContainer {
   display: grid;
@@ -90,7 +104,7 @@
 /* Parent that Next/Image fill will sit inside */
 .imageBox {
   position: relative; /* required for next/image fill */
-  width: 60%;
+  width: 75%;
   aspect-ratio: 4 / 3; /* keeps consistent box height */
   border-radius: 10px;
   overflow: hidden;
@@ -108,8 +122,66 @@
   transform: scale(1.05);
   filter: brightness(1.03);
 }
+/* Move navigation buttons closer to edges */
+/* Force nav buttons to align with edges */
+.navBtnLeft {
+  position: absolute !important;
+  top: 50%;
+  transform: translateY(-50%) !important;
+  z-index: 20;
+}
+.navBtnRight {
+  position: absolute !important;
+  top: 50%;
+  transform: translateY(-50%) !important;
+  z-index: 20;
+}
+/* Stick to left and right edges */
+.navBtnLeft {
+  top: 40px !important;
+  left: -10px !important; /* move slightly outside the slider */
+}
+
+.navBtnRight {
+  top: 40px !important;
+  right: -10px !important; /* move slightly outside the slider */
+}
+
+/* Adjust for smaller screens */
+@media (max-width: 768px) {
+  .navBtnLeft {
+    top: 35px !important;
+    left: -6px !important;
+  }
+  .navBtnRight {
+    top: 35px !important;
+    right: -6px !important;
+  }
+}
+
 
 /* ===== Responsive Layouts ===== */
+.sliderWrapper {
+  position: relative;
+  padding: 0 50px;
+  margin-bottom: 30px;
+  margin-top: 40px;
+  overflow: visible; /* ✅ allow arrows to show fully */
+  z-index: 3;
+}
+
+/* make padding smaller on mobile so arrows don’t look too far out */
+@media (max-width: 768px) {
+  .sliderWrapper {
+    padding: 0 25px;
+  }
+}
+@media (max-width: 576px) {
+  .sliderWrapper {
+    padding: 0 20px;
+  }
+}
+
 
 /* Tablet (<= 992px) -> 4 columns */
 @media (max-width: 992px) {
@@ -129,5 +201,30 @@
 @media (max-width: 576px) {
   .imageContainer {
     grid-template-columns: repeat(2, 1fr);
+  }
+}
+/* ===== Responsive Button Sizes ===== */
+@media (max-width: 992px) {
+  .autoBtn {
+    font-size: 13px;
+    padding: 8px 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .autoBtn {
+    font-size: 12px;
+    padding: 7px 12px;
+    margin: 0 3px;
+    border-radius: 6px;
+  }
+}
+
+@media (max-width: 576px) {
+  .autoBtn {
+    font-size: 11px;
+    padding: 6px 10px;
+    margin: 0 2px;
+    border-radius: 5px;
   }
 }

@@ -104,3 +104,10 @@
 .mobileSwiper .swiper-pagination-bullet-active {
   opacity: 1;
 }
+/* Hide Swiper pagination bullets on mobile devices */
+@media (max-width: 768px) {
+  :global(.mobileSwiper .swiper-pagination),
+  :global(.swiper-pagination) {
+    display: none !important;
+  }
+}
