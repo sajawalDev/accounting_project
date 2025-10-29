@@ -1,15 +1,12 @@
-// app/Blogs/page.jsx
 "use client";
 
 import { useState, useEffect } from "react";
-import { useRouter } from "next/navigation";
 import Styles from "../../src/CSS/Blogs.module.css";
 
 const BlogsPage = () => {
   const [blogsData, setBlogsData] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [loading, setLoading] = useState(true);
-  const router = useRouter();
 
   useEffect(() => {
     setLoading(true);
@@ -32,10 +29,6 @@ const BlogsPage = () => {
       ? blogsData
       : blogsData.filter((blog) => blog.subheading === selectedCategory);
 
-  const handleBlogClick = (slug) => {
-    router.push(`/blog/${slug}`);
-  };
-
   const handleCategoryChange = (cat) => {
     setSelectedCategory(cat);
     setLoading(true);
@@ -45,6 +38,7 @@ const BlogsPage = () => {
   return (
     <div className={Styles.mainContainer}>
       <div className="container">
+        {/* ====== Category Filter ====== */}
         <div className={Styles.blogsHeading}>
           <h2>Choose a Category</h2>
           <div className={Styles.Category}>
@@ -74,6 +68,7 @@ const BlogsPage = () => {
           </div>
         </div>
 
+        {/* ====== Blog Cards ====== */}
         <div className="row">
           {loading
             ? Array.from({ length: 6 }).map((_, i) => (
@@ -97,13 +92,15 @@ const BlogsPage = () => {
               ))
             : filteredBlogs.length > 0
             ? filteredBlogs.map((blog, index) => (
-                <div
-                  key={index}
-                  className="col-lg-4 col-md-6 mb-4"
-                  onClick={() => handleBlogClick(blog.slug)}
-                  style={{ cursor: "pointer" }}
-                >
-                  <div className={Styles.blogCard}>
+                <div key={index} className="col-lg-4 col-md-6 mb-4">
+                  {/* Blog Card Link */}
+                  <a
+                    href={`/blog/${blog.slug}`}
+                    className={Styles.blogCard}
+                    target="_self" // Change to "_blank" if you want always open new tab
+                    rel="noopener noreferrer"
+                    style={{ textDecoration: "none", color: "inherit" }}
+                  >
                     <div className={Styles.imagePlaceholder}>
                       <img
                         src={blog.image}
@@ -116,10 +113,14 @@ const BlogsPage = () => {
                       <p className={Styles.subheading}>{blog.subheading}</p>
                       <h4 className={Styles.title}>{blog.title}</h4>
                     </div>
-                  </div>
+                  </a>
                 </div>
               ))
-            : <p className="text-center mt-4">No blogs available for this category.</p>}
+            : (
+              <p className="text-center mt-4">
+                No blogs available for this category.
+              </p>
+            )}
         </div>
       </div>
     </div>

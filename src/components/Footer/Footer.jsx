@@ -14,10 +14,10 @@ const Footer = () => {
           {/* Left Column */}
           <div className="col-lg-5 col-md-6">
             <div className={Styles.footerContent}>
-              <h3>HAK Finances</h3>
+              <h3>HAK Financials</h3>
               <p>Location: 685 Third Avenue, New York, NY 10017</p>
-              <p>Email: hkfinance@gmail.com</p>
-              <p>+1 (647) 342 4354</p>
+              <p>Email: Hakfinancials@gmail.com</p>
+              {/* <p>+1 (647) 342 4354</p> */}
             </div>
           </div>
 

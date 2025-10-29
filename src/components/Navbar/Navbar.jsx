@@ -3,7 +3,7 @@ import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import Styles from "./Navbar.module.css";
-import logo from "../../../public/logo4.png"; 
+import logo from "../../../public/logo4.png";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -67,21 +67,6 @@ const Navbar = () => {
                 )}
               </li>
 
-              <li
-                className={Styles.dropdown}
-                onMouseEnter={() => setActiveDropdown("resources")}
-                onMouseLeave={() => setActiveDropdown(null)}
-              >
-                Resources <i className="fa-solid fa-chevron-down"></i>
-
-                {activeDropdown === "resources" && (
-                  <div className={Styles.dropdownContent}>
-                    <Link href="/blogs">Blogs</Link>
-                    <Link href="/case-studies">Case Studies</Link>
-                    <Link href="/testimonials">Testimonials</Link>
-                  </div>
-                )}
-              </li>
 
               <li
                 className={Styles.dropdown}
@@ -99,6 +84,23 @@ const Navbar = () => {
                   </div>
                 )}
               </li>
+
+              <li
+                className={Styles.dropdown}
+                onMouseEnter={() => setActiveDropdown("resources")}
+                onMouseLeave={() => setActiveDropdown(null)}
+              >
+                Resources <i className="fa-solid fa-chevron-down"></i>
+
+                {activeDropdown === "resources" && (
+                  <div className={Styles.dropdownContent}>
+                    <Link href="/blogs">Blogs</Link>
+                    <Link href="/case-studies">Case Studies</Link>
+                    <Link href="/testimonials">Testimonials</Link>
+                  </div>
+                )}
+              </li>
+
 
               <li><Link href="/contact">Contact</Link></li>
             </ul>

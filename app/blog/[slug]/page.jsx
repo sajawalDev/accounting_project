@@ -1,4 +1,3 @@
-// app/blog/[slug]/page.jsx
 "use client";
 
 import { useState, useEffect } from "react";
@@ -14,9 +13,7 @@ const BlogDetailsPage = () => {
 
   useEffect(() => {
     setLoading(true);
-    fetch(
-      "https://raw.githubusercontent.com/sajawalDev/hkfinanace-blogs-data/main/blogs.json"
-    )
+    fetch("https://raw.githubusercontent.com/sajawalDev/hkfinanace-blogs-data/main/blogs.json")
       .then((res) => res.json())
       .then((data) => {
         const foundBlog = data.find((b) => b.slug === slug);
@@ -25,12 +22,14 @@ const BlogDetailsPage = () => {
         if (foundBlog) {
           const related = data
             .filter(
-              (b) => b.subheading === foundBlog.subheading && b.slug !== foundBlog.slug
+              (b) =>
+                b.subheading === foundBlog.subheading && b.slug !== foundBlog.slug
             )
             .sort(() => 0.5 - Math.random())
             .slice(0, 4);
           setRelatedBlogs(related);
         }
+
         setLoading(false);
       })
       .catch((err) => {
@@ -48,7 +47,9 @@ const BlogDetailsPage = () => {
             <div className="row">
               <div className="col-lg-8 col-12">
                 <div className={`${Styles.skeleton} ${Styles.skeletonTitle}`} />
-                <div className={`${Styles.skeleton} ${Styles.skeletonSubheading}`} />
+                <div
+                  className={`${Styles.skeleton} ${Styles.skeletonSubheading}`}
+                />
                 {Array.from({ length: 6 }).map((_, i) => (
                   <div
                     key={i}
@@ -75,38 +76,39 @@ const BlogDetailsPage = () => {
     return <p className="text-center mt-5">Blog not found.</p>;
   }
 
-  const sections = blog.content
-    .split(/\r?\n\s*\r?\n/)
-    .map((s) => s.trim())
-    .filter(Boolean);
+  // 🧠 Enhanced content processor
+  const processContent = (text) => {
+    const lines = text
+      .split(/(?<=\?)|\r?\n/) // split by line or after question mark
+      .map((line) => line.trim())
+      .filter(Boolean);
 
-  const formattedContent = sections.map((section, i) => {
-    const wordCount = section.split(/\s+/).length;
-    const hasSentencePunct = /[.?!]/.test(section);
-    const isHeading = !hasSentencePunct && wordCount <= 8 && section.length < 70;
+    return lines.map((line, index) => {
+      const startsWithNumber = /^\d+[\.\)]?\s*/.test(line); // "1.", "2)" etc.
+      const endsWithQuestion = /\?\s*$/.test(line); // ends with "?"
 
-    if (isHeading) {
+      if (startsWithNumber || endsWithQuestion) {
+        const cleanHeading = line.replace(/^\d+[\.\)]?\s*/, ""); // remove number prefix
+        return (
+          <h3 key={index} className={Styles.dynamicHeading}>
+            {cleanHeading}
+          </h3>
+        );
+      }
+
       return (
-        <h3 key={i} className={Styles.sectionHeading}>
-          {section}
-        </h3>
+        <p key={index} className={Styles.paragraph}>
+          {line}
+        </p>
       );
-    }
+    });
+  };
 
-    const lines = section.split(/\r?\n/).filter((l) => l.trim() !== "");
-    return (
-      <div key={i}>
-        {lines.map((line, j) => (
-          <p key={j} className={Styles.paragraph}>
-            {line.trim()}
-          </p>
-        ))}
-      </div>
-    );
-  });
+  const formattedContent = processContent(blog.content);
 
   return (
     <div className={Styles.mainContainer}>
+      {/* ===== Hero Section ===== */}
       <div
         className={Styles.parallaxImage}
         style={{ backgroundImage: `url(${blog.image})` }}
@@ -119,17 +121,21 @@ const BlogDetailsPage = () => {
         </div>
       </div>
 
+      {/* ===== Blog Body ===== */}
       <div className={Styles.blogText}>
         <div className="container">
           <div className="row">
+            {/* Main Article */}
             <div className="col-lg-8">
               <div className={Styles.mainArticle}>
                 <span>
-                  <b>Article: </b>
+                  <b>Article:</b>
                 </span>
                 {formattedContent}
               </div>
             </div>
+
+            {/* Related Blogs */}
             <div className="col-lg-4">
               <h4>Related Blogs</h4>
               {relatedBlogs.length > 0 ? (
@@ -138,7 +144,6 @@ const BlogDetailsPage = () => {
                     key={b.slug}
                     className={Styles.relatedCard}
                     onClick={() => router.push(`/blog/${b.slug}`)}
-                    style={{ cursor: "pointer", marginBottom: "15px" }}
                   >
                     <div className={Styles.relatedCardimg}>
                       <img
