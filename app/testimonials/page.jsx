@@ -11,32 +11,32 @@ const TestimonialPage = () => {
     {
       img: "/assets/testimonials/img1.jpg",
       name: "Diana Maldonado",
-      text: "I’ve been working with HAK Financials for over three years, and his expertise has been invaluable. He manages my QuickBooks bookkeeping clients, prepares financial statements, handles income tax filings, and provides exceptional back-office support. He’s professional, reliable, and genuinely cares about delivering quality work.",
+      text: "I’ve been working with HAK Financials for over three years, and their expertise has been invaluable. They manage my QuickBooks bookkeeping clients, prepare financial statements, handle income tax filings, and provide exceptional back-office support. The team is professional, reliable, and genuinely committed to delivering quality work.",
     },
     {
       img: "/assets/testimonials/img2.jpg",
       name: "Shannon Whittington",
-      text: "HAK Financials team are incredible to work with. We’ve been collaborating for four years, and he’s always professional, creative, and detail-oriented. Finding Haris has truly been a blessing—he’s a gem!",
+      text: "The HAK Financials team is incredible to work with. We’ve been collaborating for four years, and they are always professional, creative, and detail-oriented. Working with Haris has truly been a blessing—he’s a real asset!",
     },
     {
       img: "/assets/testimonials/img3.jpg",
       name: "Roszetta Pringle",
-      text: "HAK Financials are highly skilled in accounting and back-office support. His attention to detail and efficiency have made a noticeable difference in my business operations.",
+      text: "HAK Financials is highly skilled in accounting and back-office support. Their attention to detail and efficiency have made a noticeable difference in my business operations.",
     },
     {
       img: "/assets/testimonials/img4.jpg",
       name: "Dr. Arna Brammer",
-      text: "At HAK Financials have been an essential part of my business. Their financial expertise and professionalism have provided me with peace of mind.",
+      text: "HAK Financials has been an essential part of my business. Their financial expertise and professionalism have given me complete peace of mind.",
     },
     {
       img: "/assets/testimonials/img5.jpg",
       name: "Dr. Stephanie",
-      text: "HAK Financials team are extremely reliable and efficient. They manage my day-to-day operations, back-office support, and account management seamlessly.",
+      text: "The HAK Financials team is extremely reliable and efficient. They manage my day-to-day operations, back-office support, and account management seamlessly.",
     },
     {
       img: "/assets/testimonials/img6.jpeg",
       name: "Martin",
-      text: "Working with HAK Financials has been a great experience. He helped me manage QuickBooks Online for several of my clients with accuracy, consistency, and professionalism.",
+      text: "Working with HAK Financials has been a great experience. They have helped me manage QuickBooks Online for several of my clients with accuracy, consistency, and professionalism.",
     },
   ];
 

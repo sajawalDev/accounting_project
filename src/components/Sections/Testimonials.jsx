@@ -17,27 +17,27 @@ const Testimonials = () => {
         {
             img: "/assets/testimonials/img2.jpg",
             name: "Shannon Whittington",
-            text: "The HAK Financials team are incredible to work with. We’ve collaborated for four years, and they are always professional, creative, and detail-oriented. Finding Haris has been a blessing—he’s a gem!",
+            text: "The HAK Financials team is incredible to work with. We’ve collaborated for four years, and they are always professional, creative, and detail-oriented. Working with Haris has been a blessing—he’s truly a gem!",
         },
         {
             img: "/assets/testimonials/img3.jpg",
             name: "Roszetta Pringle",
-            text: "HAK Financials are highly skilled in accounting and back-office support. Their attention to detail and efficiency have significantly improved my business operations.",
+            text: "HAK Financials is highly skilled in accounting and back-office support. Their attention to detail and efficiency have significantly improved my business operations.",
         },
         {
             img: "/assets/testimonials/img4.jpg",
             name: "Dr. Arna Brammer",
-            text: "HAK Financials have been an essential part of my business. Their financial expertise and professionalism give me peace of mind.",
+            text: "HAK Financials has been an essential part of my business. Their financial expertise and professionalism give me peace of mind.",
         },
         {
             img: "/assets/testimonials/img5.jpg",
             name: "Dr. Stephanie",
-            text: "HAK Financials are extremely reliable and efficient. They manage my day-to-day operations, back-office support, and account management seamlessly.",
+            text: "HAK Financials is extremely reliable and efficient. They manage my day-to-day operations, back-office support, and account management seamlessly.",
         },
         {
             img: "/assets/testimonials/img6.jpeg",
             name: "Martin",
-            text: "Working with HAK Financials has been a great experience. They helped me manage QuickBooks Online for several of my clients with accuracy, consistency, and professionalism.",
+            text: "Working with HAK Financials has been a great experience. They have helped me manage QuickBooks Online for several of my clients with accuracy, consistency, and professionalism.",
         },
     ];
 
