@@ -211,7 +211,15 @@ const Contact = () => {
                             </div>
 
                             <p className='mt-3 mb-0 text-center'>
-                                Or call us at <strong>+1 (675) 678 8343</strong>
+                                Or call us at <strong><a
+                                    href="https://wa.me/923214575096"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-dark text-decoration-none fw-bold"
+                                >
+                                    +92 321 4575096
+                                </a>
+                                </strong>
                             </p>
                         </form>
                     </div>
