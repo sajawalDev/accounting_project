@@ -20,6 +20,11 @@
     text-decoration: none;
     color: #fff;
 }
+.dev{
+    text-decoration: none;
+    color:#fff;
+    text-weight:bold;
+}
 .copyright{
     margin-top: 40px;
     text-align: center;
