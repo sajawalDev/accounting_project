@@ -80,7 +80,7 @@ const Footer = () => {
         </div>
 
         <div className={Styles.copyright}>
-          <p>Copyright © 2025 HAKFinances | Powered by <a href="https://bossdigitalsol.com/">BOSS Digital Solutions</a></p>
+          <p>Copyright © 2025 HAKFinances | Powered by <a href="https://bossdigitalsol.com/">BOSS DIGITAL SOLUTIONS</a></p>
         </div>
       </div>
     </footer>
